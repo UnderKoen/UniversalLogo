@@ -1,3 +1,14 @@
+.idea/
+gradle/
+out/
+.gradle/
+modules/
+build.gradle
+gradlew
+gradlew.bat
+settings.gradle
+/build/
+
 # Covers JetBrains IDEs: IntelliJ, RubyMine, PhpStorm, AppCode, PyCharm, CLion, Android Studio and WebStorm
 # Reference: https://intellij-support.jetbrains.com/hc/en-us/articles/206544839
 
