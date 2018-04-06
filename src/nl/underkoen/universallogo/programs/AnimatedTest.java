@@ -1,6 +1,7 @@
 package nl.underkoen.universallogo.programs;
 
 import nl.underkoen.universallogo.*;
+import nl.underkoen.universallogo.Canvas;
 import nl.underkoen.universallogo.Point;
 
 import java.awt.*;
@@ -10,6 +11,17 @@ import java.awt.*;
  */
 public class AnimatedTest extends AnimatedProgram implements MouseListener {
     public int deg;
+    public Canvas canvas;
+
+    @Override
+    public Canvas getCanvas() {
+        return canvas;
+    }
+
+    @Override
+    public void setCanvas(Canvas canvas) {
+        this.canvas = canvas;
+    }
 
     @Override
     public String getName() {

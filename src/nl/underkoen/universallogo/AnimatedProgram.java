@@ -3,7 +3,7 @@ package nl.underkoen.universallogo;
 /**
  * Created by Under_Koen on 03/04/2018.
  */
-public abstract class AnimatedProgram extends Program {
+public abstract class AnimatedProgram implements Program {
     private boolean animationActive = false;
     private Thread animation;
 
@@ -30,7 +30,7 @@ public abstract class AnimatedProgram extends Program {
         animationActive = true;
         animation = new Thread(() -> {
             while (isAnimationActive()) {
-                canvas.redraw();
+                getCanvas().redraw();
                 sleep(delay);
             }
         });

@@ -3,31 +3,29 @@ package nl.underkoen.universallogo;
 /**
  * Created by Under_Koen on 31/03/2018.
  */
-public abstract class Program {
+public interface Program {
     /**
-     * The canvas to use when to draw stuff
+     * @return the canvas to use to draw
      */
-    protected Canvas canvas;
+    Canvas getCanvas();
 
     /**
      * Set the canvas to paint in
      */
-    public void setCanvas(Canvas canvas) {
-        this.canvas = canvas;
-    }
+    void setCanvas(Canvas canvas);
 
     /**
      * @return the name of the program
      */
-    public abstract String getName();
+    String getName();
 
     /**
      * Runs after the canvas is set, you can't draw yet
      */
-    public abstract void init();
+    void init();
 
     /**
      * Runs when loading of stuff is done
      */
-    public abstract void run();
+    void run();
 }

@@ -1,5 +1,6 @@
 package nl.underkoen.universallogo.programs;
 
+import nl.underkoen.universallogo.Canvas;
 import nl.underkoen.universallogo.Location;
 import nl.underkoen.universallogo.MouseListener;
 import nl.underkoen.universallogo.Program;
@@ -7,8 +8,19 @@ import nl.underkoen.universallogo.Program;
 /**
  * Created by Under_Koen on 03/04/2018.
  */
-public class Test extends Program implements MouseListener {
+public class Test implements Program, MouseListener {
     private Location mouse;
+    public Canvas canvas;
+
+    @Override
+    public Canvas getCanvas() {
+        return canvas;
+    }
+
+    @Override
+    public void setCanvas(Canvas canvas) {
+        this.canvas = canvas;
+    }
 
     @Override
     public String getName() {

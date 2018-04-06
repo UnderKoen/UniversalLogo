@@ -1,14 +1,26 @@
 package nl.underkoen.universallogo.programs;
 
 import nl.underkoen.universallogo.*;
+import nl.underkoen.universallogo.Canvas;
 
 import java.awt.*;
 
 /**
  * Created by Under_Koen on 31/03/2018.
  */
-public class PerfectCircle extends Program implements VariableListener {
+public class PerfectCircle implements Program, VariableListener {
     Variable[] variables = {new Variable("Width", 100, 249, 1)};
+    public Canvas canvas;
+
+    @Override
+    public Canvas getCanvas() {
+        return canvas;
+    }
+
+    @Override
+    public void setCanvas(Canvas canvas) {
+        this.canvas = canvas;
+    }
 
     @Override
     public String getName() {
